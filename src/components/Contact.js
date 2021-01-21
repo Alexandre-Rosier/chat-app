@@ -8,7 +8,7 @@ const status = true;
 function Contact() {
     return (
       <div className="Contact">
-        <img className="avatar" src={avatar} />
+        <img className="avatar" src={avatar} alt={name} />
         <div>
             <h1>{name}</h1>
             <p className="status"><span className="status-online"></span>{status ? "Online" : "Offline"}</p>
