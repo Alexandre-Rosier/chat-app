@@ -24,7 +24,6 @@
   /* Status text */
   .Contact .status{
     display: flex;
-    /* justify-content: */
     color: black;
     margin: 0;
     display: inline-block;
