@@ -23,24 +23,26 @@
   
   /* Status text */
   .Contact .status{
-    display: flex;
-    color: black;
+    display: flex; 
+    justify-content: flex-start; 
+    color: rgb(5, 5, 5);
     margin: 0;
-    display: inline-block;
   }
   
   /* Status (rounded&colored indicator) */
   .Contact .status .status-online,
   .Contact .status .status-offline {
-    display: inline-block;
+    /* display: inline-block;  */
     border-radius: 50%;
     width: 8px;
     height: 8px;
     margin-right: 6px;
+    margin-top: 7px;
   }
   
   .Contact .status .status-online {
-    background: #39cc14;
+    background: #0fd129;
+    
   }
   
   .Contact .status .status-offline {
