@@ -1,17 +1,32 @@
+import { ReactComponent } from '*.svg';
 import React from 'react';
 import './Contact.css';
 
 
-function Contact(props) {
-    return (
-      <div className="Contact">
-        <img className="avatar" src={props.src} alt={props.alt} />
-        <div>
-            <h1>{props.alt}</h1>
-            <p className="status"><span className={props.status ? "status-online" : "status-offline"}></span>{props.status ? "Online" : "Offline"}</p>
-        </div>
-      </div>
-    );
+class Contact extends React.components {
+  constructor(props) {
+    super(props);
+    this.state = {
+      online: false,
+    };
   }
+  render() {
+    return (
+        <div className="Contact">
+          <img className="avatar" src={this.props.src} alt={this.props.alt} />
+          <div>
+              <h1>{this.props.alt}</h1>
+              <p className="status" 
+              onClick={event => {
+                const newOnline = !this.state.online;
+                this.setState({online: newOnline});
+              }} >
+                <span className={this.props.status ? "status-online" : "status-offline"}></span>
+                {this.props.status ? "Online" : "Offline"}
+              </p>
+          </div>
+        </div>
+      );
+  }}
 
 export default Contact;
